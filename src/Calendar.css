@@ -1,0 +1,59 @@
+.table {
+    display: flex;
+    flex-wrap: wrap;
+    width: 90%;
+    max-width: 90%;
+    flex-direction: column;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.cell {
+    flex-basis: calc(100% / 7);
+    text-align: center;
+    border: 1px solid #EDEBEB;
+    font-weight: 700;
+}
+
+.table .header .cell {
+    font-size: 20px;
+}
+
+.table .cell {
+    font-size: 32px;
+}
+
+.table .cell .date {
+    padding-top: 5px;
+    display: inline-block;
+    margin-bottom: -5px;
+}
+
+.calendar-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0 0 0;
+    font-size: 32px;
+    font-weight: 700;
+    max-width: 90%;
+    width: 90%;
+}
+
+.arrow {
+    background: none;
+    color: inherit;
+    border: none;
+    padding: 0;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit;
+    width: 15%;
+}
+
+.arrow img {
+    width: 35%;
+}

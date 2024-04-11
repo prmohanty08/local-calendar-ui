@@ -1,0 +1,17 @@
+.the-day {
+    font-size: 72px;
+    font-weight: 800;
+}
+
+.the-date {
+    font-size: 180px;
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: 0px;
+    margin-top: -50px;
+}
+
+.the-occasion {
+    font-size: 24px;
+    font-weight: 500;
+}

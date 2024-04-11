@@ -1,0 +1,81 @@
+@font-face {
+    font-family: 'OdiaFont';
+    src: url('./assets/fonts/baloobhaina2.ttf') format('truetype');
+    /* src: url('./assets/fonts/odia-font-v1.woff2') format('woff2'); */
+    /* src: url('./assets/fonts/notosansodia.ttf') format('truetype'); */
+    unicode-range: U+0951-0952, U+0964-0965, U+0B01-0B77, U+1CDA, U+1CF2, U+200C-200D, U+20B9, U+25CC;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body,
+html {
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    font-family: "OdiaFont";
+}
+
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.column {
+    float: left;
+    width: 100%;
+    min-height: 100vh;
+    text-align: center;
+    min-width: 400px;
+}
+
+.center-aligned-content {
+    display: flex;
+    /* this will turn the column into a flex container */
+    flex-direction: column;
+    /* this makes the content stack vertically */
+    justify-content: center;
+    /* this centers the content vertically in the column */
+    align-items: center;
+    /* this centers the content horizontally in the column */
+    text-align: center;
+    /* this ensures the text itself is also centered */
+    height: 100%;
+    /* ensures the column takes full height, modify according to needs */
+}
+
+.center-aligned-content-horizontal {
+    display: flex;
+    /* this will turn the column into a flex container */
+    flex-direction: column;
+    /* this makes the content stack vertically */
+    align-items: center;
+    /* this centers the content horizontally in the column */
+    text-align: center;
+    /* this ensures the text itself is also centered */
+}
+
+.dark-pink-red {
+    background-color: #f4677a;
+    color: #FFFFFF;
+}
+
+.light-pink-red {
+    background-color: #FFFFFF;
+    color: #f4677a;
+}
+
+.flip-horizontal {
+    transform: rotate(180deg);
+}
+
+@media screen and (min-width: 768px) {
+    .column {
+        width: 33.33%;
+    }
+}
