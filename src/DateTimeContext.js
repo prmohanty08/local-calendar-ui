@@ -9,9 +9,9 @@ export const CalendarDateTimeProvider = ({ children }) => {
     useEffect(() => {
         const fetchCurrentTime = async () => {
             try {
-                const response = await fetch('https://timeapi.io/api/Time/current/zone?timeZone=Asia/Kolkata');
+                const response = await fetch('http://worldtimeapi.org/api/timezone/Asia/Kolkata.json');
                 const data = await response.json();
-                const currentDateTime = DateTime.fromISO(data.dateTime, { zone: "Asia/Kolkata" });
+                const currentDateTime = DateTime.fromISO(data.datetime, { zone: "Asia/Kolkata" });
                 setCalendarDateTime(currentDateTime);
             } catch (error) {
                 console.error('API failed, hence using client system date time:', error);
