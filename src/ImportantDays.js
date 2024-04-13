@@ -29,10 +29,10 @@ const ImportantDays = () => {
                 <div className="important-day-header">
                     ବିଶେଷ ଦିନ ଗୁଡିକ
                 </div>
+                <FilterMenu selected={selectedFilterMenu} setSelected={setSelectedFilterMenu} />
                 <div className='important-day-details-container'>
                     <DaysList importantDays={importantDays} langConverter={convertToOdia}></DaysList>
                 </div>
-                <FilterMenu selected={selectedFilterMenu} setSelected={setSelectedFilterMenu} />
             </div>
         );
     }
