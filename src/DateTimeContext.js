@@ -9,9 +9,9 @@ export const CalendarDateTimeProvider = ({ children }) => {
     useEffect(() => {
         const fetchCurrentTime = async () => {
             try {
-                const response = await fetch('http://worldtimeapi.org/api/timezone/Asia/Kolkata.json');
+                const response = await fetch('https://local-calendar-next-api-wine-delta-53.vercel.app/api/datetime');
                 const data = await response.json();
-                const currentDateTime = DateTime.fromISO(data.datetime, { zone: "Asia/Kolkata" });
+                const currentDateTime = DateTime.fromISO(data.dateTime, { zone: data.timeZone });
                 setCalendarDateTime(currentDateTime);
             } catch (error) {
                 console.error('API failed, hence using client system date time:', error);
