@@ -11,7 +11,7 @@ export const CalendarDateTimeProvider = ({ children }) => {
             try {
                 const response = await fetch('https://local-calendar-next-api-wine-delta-53.vercel.app/api/datetime');
                 const data = await response.json();
-                const currentDateTime = DateTime.fromISO(data.dateTime, { zone: data.timeZone });
+                const currentDateTime = DateTime.fromISO(data.datetime, { zone: data.timezone });
                 setCalendarDateTime(currentDateTime);
             } catch (error) {
                 console.error('API failed, hence using client system date time:', error);
