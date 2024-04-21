@@ -34,14 +34,14 @@ const createMonthCalendar = (year, month) => {
 }
 
 const Calendar = () => {
-    const selectedDateTime = useSelectedDateTime();
+    const { selectedDate } = useSelectedDateTime();
 
-    if (selectedDateTime) {
-        const dates = createMonthCalendar(selectedDateTime.year, selectedDateTime.month);
+    if (selectedDate && selectedDate.date) {
+        const dates = createMonthCalendar(selectedDate.year, selectedDate.month);
 
         return (
             <div className="column light-pink-red center-aligned-content-horizontal">
-                <MonthYearMenu year={selectedDateTime.year} month={selectedDateTime.month} />
+                <MonthYearMenu year={selectedDate.year} month={selectedDate.month} />
                 <Table headers={calendarWeekdaysHeader} cellData={dates} />
             </div>
         );

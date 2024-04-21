@@ -11,11 +11,12 @@ const Table = ({ headers, cellData }) => {
                     <div className="cell" key={index}>{header}</div>
                 ))}
             </div>
+
             {cellData.map((row, rowIndex) => (
                 <div className="row" key={rowIndex}>
                     {row.map((cell, cellIndex) => (
                         <div className="cell" key={cellIndex}>
-                            {cell && <span className='date'>{convertToOdia(cell)}</span>}
+                            {cell && <span className='date clickable'>{convertToOdia(cell)}</span>}
                         </div>
                     ))}
                 </div>
