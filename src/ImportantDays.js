@@ -1,12 +1,14 @@
 import React, { useContext, useState } from 'react';
 import { MonthWiseDataContext } from './MonthwiseDataProvider';
 import { NumberMapContext } from './NumberMapContext';
+import { useSelectedDateTime } from './DateTimeContext';
 
 import './ImportantDays.css';
 
 const ImportantDays = () => {
     const { monthData } = useContext(MonthWiseDataContext);
     const { convertToOdia } = useContext(NumberMapContext);
+    const { selectedDate } = useSelectedDateTime();
     const [selectedFilterMenu, setSelectedFilterMenu] = useState('Festivals');
 
     const getDays = (filterMenu) => {
@@ -23,7 +25,7 @@ const ImportantDays = () => {
     };
 
     const importantDays = getDays(selectedFilterMenu);
-    if (monthData) {
+    if (selectedDate.month && selectedDate.year) {
         return (
             <div className="column dark-pink-red">
                 <div className="important-day-header">

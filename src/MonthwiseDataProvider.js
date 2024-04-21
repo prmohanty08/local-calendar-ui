@@ -8,7 +8,7 @@ export const MonthWiseDataContext = createContext();
 
 export const MonthwiseDataProvider = ({ children }) => {
     const [monthData, setMonthData] = useState(null);
-    const selectedDate = useSelectedDateTime();
+    const { selectedDate } = useSelectedDateTime();
 
     useEffect(() => {
         fetchData();
@@ -16,7 +16,7 @@ export const MonthwiseDataProvider = ({ children }) => {
 
     const fetchData = async () => {
         try {
-            if (selectedDate) {
+            if (selectedDate && selectedDate.date) {
                 const response = await fetch(`${process.env.PUBLIC_URL}/data/${selectedDate.year}/${monthNames[selectedDate.month - 1]}.json`);
                 if (!response.ok) { // check if response failed
                     throw new Error("Response failed!");

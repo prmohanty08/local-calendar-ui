@@ -20,11 +20,10 @@ export const NumberMapProvider = ({ children }) => {
         });
     }, []);
 
-    const convertToOdia = (num, decoratorType) => {
+    const convertToOdia = (num) => {
         if (num === null || num === undefined) return '';
         const numString = num.toString();
         let result = '';
-
         for (let i = 0; i < numString.length; i++) {
             result += numberMap[numString.charAt(i)];
         }
