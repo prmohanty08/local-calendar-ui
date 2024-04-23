@@ -1,7 +1,8 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect } from 'react';
 import Arrow from './assets/icons/right-arrow.svg';
 
 import { NumberMapContext } from './NumberMapContext';
+import { getMonthLabel, pageTitle } from './CalendarMasterData.js'
 
 import { MonthWiseDataContext } from './MonthwiseDataProvider';
 
@@ -12,12 +13,22 @@ const MonthYearMenu = ({ year, month }) => {
   const { monthData } = useContext(MonthWiseDataContext);
   const { updateMonth } = useSelectedDateTime();
 
+  const theMonthLabel = monthData ? monthData.description : getMonthLabel(month - 1, 'OR');
+  const theYearLabel = convertToOdia(year);
+  console.log(theYearLabel)
+
+  useEffect(() => {
+    if (theMonthLabel) {
+      document.title = pageTitle + ' - ' + theMonthLabel + ' ' + theYearLabel;
+    }
+  }, [theMonthLabel]);
+
   return (
     <div className="calendar-menu">
       <button className="arrow" onClick={() => updateMonth(-1)}>
         <img src={Arrow} className="flip-horizontal" alt="previous" />
       </button>
-      <div>{monthData?.description} {convertToOdia(year)}</div>
+      <div>{theMonthLabel} {theYearLabel}</div>
       <button className="arrow" onClick={() => updateMonth(1)}>
         <img src={Arrow} alt="next" />
       </button>
