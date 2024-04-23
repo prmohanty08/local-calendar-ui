@@ -24,7 +24,6 @@ export const CalendarDateTimeProvider = ({ children }) => {
     const updateMonth = (n) => {
         setSelectedDate(prevState => {
             if (prevState && prevState.date && (n != 0 && (n < 11 && n > -11))) {
-                console.log(JSON.stringify(prevState));
                 const currentDateTime = DateTime.local(prevState.year, prevState.month, prevState.date);
                 const updatedDate = currentDateTime.plus({ months: n });
                 return {

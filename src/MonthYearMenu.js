@@ -15,7 +15,6 @@ const MonthYearMenu = ({ year, month }) => {
 
   const theMonthLabel = monthData ? monthData.description : getMonthLabel(month - 1, 'OR');
   const theYearLabel = convertToOdia(year);
-  console.log(theYearLabel)
 
   useEffect(() => {
     if (theMonthLabel) {
