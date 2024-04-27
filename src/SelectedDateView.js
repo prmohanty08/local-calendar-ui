@@ -16,7 +16,7 @@ const SelectedDateView = () => {
     const { monthData } = useContext(MonthWiseDataContext);
     if (selectedDate && selectedDate.date) {
         return (
-            <div className="column dark-pink-red center-aligned-content">
+            <div className="column dark-pink-red center-aligned-content selected-date-view">
                 <VerticalBanner />
                 <p>ଓଡି଼ଶାରେ ଆଜି</p>
                 <Moon></Moon>

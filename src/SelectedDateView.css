@@ -1,10 +1,14 @@
+.selected-date-view {
+    position: relative;
+}
+
 .the-day {
-    font-size: 70px;
+    font-size: 50px;
     font-weight: 800;
 }
 
 .the-date {
-    font-size: 160px;
+    font-size: 140px;
     font-weight: 700;
     line-height: 1.2;
     letter-spacing: 0px;
