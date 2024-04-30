@@ -15,16 +15,20 @@ const SelectedDateView = () => {
     const { convertToOdia } = useContext(NumberMapContext);
     const { monthData } = useContext(MonthWiseDataContext);
     if (selectedDate && selectedDate.date) {
+        let tithi, naxatra = '';
+        let lunarDay = 0;
+        if (monthData && monthData.occasions) {
+            tithi = monthData.occasions[selectedDate.date - 1]?.tithi;
+            naxatra = monthData.occasions[selectedDate.date - 1]?.naxatra;
+            lunarDay = monthData.occasions[selectedDate.date - 1]?.lunarDay;
+        }
+
         return (
             <div className="column dark-pink-red center-aligned-content selected-date-view">
                 <VerticalBanner />
                 <p>ଓଡି଼ଶାରେ ଆଜି</p>
-                <Moon></Moon>
-                <p className='the-occasion'>
-                    {monthData && monthData.occasions ? monthData.occasions[selectedDate.date - 1]?.tithi : ''}
-                    <br />
-                    {monthData && monthData.occasions ? monthData.occasions[selectedDate.date - 1]?.naxatra : ''}
-                </p>
+                <Moon day={lunarDay}></Moon>
+                <p className='the-occasion'>{tithi}<br />{naxatra}</p>
                 <p className='the-day'>{getWeekdayLabel(selectedDate.weekday - 1, 'OR')}</p>
                 <p className='the-date'>{convertToOdia(selectedDate.date)}</p>
                 <p>
