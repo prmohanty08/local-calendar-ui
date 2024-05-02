@@ -1,3 +1,11 @@
 {
-    "description": "ନଭେମ୍ବର"
+    "description": "ନଭେମ୍ବର",
+    "govtHolidays": [
+        {
+            "date": "15",
+            "details": [
+                "ରାସ ପୂର୍ଣ୍ଣିମା"
+            ]
+        }
+    ]
 }
