@@ -22,6 +22,15 @@ const MonthYearMenu = ({ year, month }) => {
     }
   }, [theMonthLabel]);
 
+  const theMonthLabel = monthData ? monthData.description : getMonthLabel(month - 1, 'OR');
+  const theYearLabel = convertToOdia(year);
+
+  useEffect(() => {
+    if (theMonthLabel) {
+      document.title = pageTitle + ' - ' + theMonthLabel + ' ' + theYearLabel;
+    }
+  }, [theMonthLabel]);
+
   return (
     <div className="calendar-menu">
       <button className="arrow" onClick={() => updateMonth(-1)}>
