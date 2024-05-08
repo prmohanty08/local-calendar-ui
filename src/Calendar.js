@@ -48,8 +48,8 @@ const Calendar = () => {
         }
 
         const handleSelectedDateDetailsClose = () => {
-            setSelectedCalendarDate(null);
             setSelectedDateDetailsVisible(false);
+            setSelectedCalendarDate(null);
         }
 
         return (

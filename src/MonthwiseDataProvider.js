@@ -13,7 +13,7 @@ export const MonthwiseDataProvider = ({ children }) => {
 
     useEffect(() => {
         if (serverDateTime) {
-            fetchMonthData(serverDateTime.month, serverDateTime.year, setCurrentMonthData);
+            fetchMonthData(serverDateTime.month, serverDateTime.year, [setCurrentMonthData, setSelectedMonthData]);
         }
     }, [serverDateTime]);
 
@@ -28,20 +28,22 @@ export const MonthwiseDataProvider = ({ children }) => {
         }
     }, [selectedDate]);
 
-    const fetchMonthData = async (month, year, setMonthData) => {
+    const fetchMonthData = async (month, year, monthDataSetters = []) => {
+        let monthDetails = null;
         try {
             if (month && year) {
                 const response = await fetch(`${process.env.PUBLIC_URL}/data/${year}/${monthNames[month - 1]}.json`);
                 if (!response.ok) { // check if response failed
                     throw new Error("Response failed!");
                 }
-                const monthDetails = await response.json();
-                setMonthData(monthDetails);
+                monthDetails = await response.json();
             }
         } catch (error) {
             console.log(error);
-            setMonthData(null);
         }
+        Array.isArray(monthDataSetters)
+            ? monthDataSetters.forEach(setMonthData => setMonthData(monthDetails))
+            : monthDataSetters(monthDetails);
     };
 
     return (
