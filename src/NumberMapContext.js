@@ -30,8 +30,15 @@ export const NumberMapProvider = ({ children }) => {
         return result;
     };
 
+    const composeItemsByIndex = (item, itemIndex, itemsLength) => {
+        let result = ((itemIndex === itemsLength - 1 && itemsLength > 1) ? ' ଓ ' : '') +
+            item +
+            ((itemIndex !== itemsLength - 2 && itemIndex < itemsLength - 2) ? ', ' : '');
+        return result;
+    };
+
     return (
-        <NumberMapContext.Provider value={{ convertToOdia }}>
+        <NumberMapContext.Provider value={{ convertToOdia, composeItemsByIndex }}>
             {children}
         </NumberMapContext.Provider>
     );

@@ -1,22 +1,22 @@
 import React, { useContext, useState } from 'react';
 import { MonthWiseDataContext } from './MonthwiseDataProvider';
 import { NumberMapContext } from './NumberMapContext';
-import { useSelectedDateTime } from './DateTimeContext';
+import { useCalendarDateTime } from './DateTimeContext';
 
 import './ImportantDays.css';
 
 const ImportantDays = () => {
-    const { monthData } = useContext(MonthWiseDataContext);
-    const { convertToOdia } = useContext(NumberMapContext);
-    const { selectedDate } = useSelectedDateTime();
+    const { selectedMonthData } = useContext(MonthWiseDataContext);
+    const { convertToOdia, composeItemsByIndex } = useContext(NumberMapContext);
+    const { selectedDate } = useCalendarDateTime();
     const [selectedFilterMenu, setSelectedFilterMenu] = useState('Festivals');
 
     const getDays = (filterMenu) => {
-        if (monthData) {
+        if (selectedMonthData) {
             switch (filterMenu) {
-                case 'Festivals': return monthData.festivals ? monthData.festivals : null;
-                case 'Holidays': return monthData.govtHolidays ? monthData.govtHolidays : null;
-                case 'AuspiciousDays': return monthData.auspiciousDays ? monthData.auspiciousDays : null;
+                case 'Festivals': return selectedMonthData.festivals ? selectedMonthData.festivals : null;
+                case 'Holidays': return selectedMonthData.govtHolidays ? selectedMonthData.govtHolidays : null;
+                case 'AuspiciousDays': return selectedMonthData.auspiciousDays ? selectedMonthData.auspiciousDays : null;
                 default: return null;
             }
         } else {
@@ -33,7 +33,7 @@ const ImportantDays = () => {
                 </div>
                 <FilterMenu selected={selectedFilterMenu} setSelected={setSelectedFilterMenu} />
                 <div className='important-day-details-container'>
-                    <DaysList importantDays={importantDays} langConverter={convertToOdia}></DaysList>
+                    <DaysList importantDays={importantDays} langConverter={convertToOdia} composeDays={composeItemsByIndex}></DaysList>
                 </div>
             </div>
         );
@@ -42,7 +42,7 @@ const ImportantDays = () => {
 
 export default ImportantDays;
 
-const DaysList = ({ importantDays, langConverter }) => {
+const DaysList = ({ importantDays, langConverter, composeDays }) => {
     if (importantDays && importantDays.length > 0) {
         return importantDays.map((day, dayIndex) => (
             <div key={dayIndex} className="transparent-div">
@@ -53,9 +53,7 @@ const DaysList = ({ importantDays, langConverter }) => {
                     {
                         day.details.map((item, itemIndex) => (
                             <span key={`dd-${dayIndex}-${itemIndex}`}>
-                                {itemIndex === day.details.length - 1 && day.details.length > 1 ? ' ଓ ' : ''}
-                                {item}
-                                {itemIndex !== day.details.length - 2 && itemIndex < day.details.length - 2 ? ', ' : ''}
+                                {composeDays(item, itemIndex, day.details.length)}
                             </span>
                         ))
                     }

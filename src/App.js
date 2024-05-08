@@ -2,7 +2,7 @@ import { NumberMapProvider } from './NumberMapContext';
 import { CalendarDateTimeProvider } from './DateTimeContext';
 import { MonthwiseDataProvider } from './MonthwiseDataProvider';
 
-import SelectedDateView from "./SelectedDateView";
+import CurrentDateView from "./CurrentDateView";
 import Calendar from "./Calendar";
 import ImportantDays from "./ImportantDays";
 import Footer from "./Footer";
@@ -12,7 +12,7 @@ export default function initialize() {
         <CalendarDateTimeProvider>
             <NumberMapProvider>
                 <MonthwiseDataProvider>
-                    <SelectedDateView />
+                    <CurrentDateView />
                     <Calendar />
                     <ImportantDays />
                 </MonthwiseDataProvider>

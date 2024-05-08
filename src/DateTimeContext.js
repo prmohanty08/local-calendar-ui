@@ -4,11 +4,12 @@ import { DateTime } from 'luxon';
 export const DateTimeContext = createContext();
 
 export const CalendarDateTimeProvider = ({ children }) => {
-    const [fetchedDateTime, setFetchedDateTime] = useState(null);
+    const [serverDateTime, setFetchedDateTime] = useState(null);
     const [selectedDate, setSelectedDate] = useState({
         date: null,
         month: null,
         year: null,
+        weekday: null
     });
 
     const setCurrentDateTime = (theDateTime) => {
@@ -21,11 +22,11 @@ export const CalendarDateTimeProvider = ({ children }) => {
         });
     }
 
-    const updateMonth = (n) => {
+    const updateMonth = (value) => {
         setSelectedDate(prevState => {
-            if (prevState && prevState.date && (n != 0 && (n < 11 && n > -11))) {
+            if (prevState && prevState.date && (value != 0 && (value < 11 && value > -11))) {
                 const currentDateTime = DateTime.local(prevState.year, prevState.month, prevState.date);
-                const updatedDate = currentDateTime.plus({ months: n });
+                const updatedDate = currentDateTime.plus({ months: value });
                 return {
                     date: updatedDate.day,
                     month: updatedDate.month,
@@ -53,17 +54,17 @@ export const CalendarDateTimeProvider = ({ children }) => {
     }, []);
 
     return (
-        <DateTimeContext.Provider value={{ fetchedDateTime, selectedDate, updateMonth }}>
+        <DateTimeContext.Provider value={{ serverDateTime, selectedDate, updateMonth }}>
             {children}
         </DateTimeContext.Provider>
     );
 
 }
 
-export const useSelectedDateTime = () => {
+export const useCalendarDateTime = () => {
     const context = useContext(DateTimeContext);
     if (context === undefined) {
-        throw new Error('useSelectedDateTime must be used within a CalendarDateTimeProvider.');
+        throw new Error('useCalendarDateTime must be used within a CalendarDateTimeProvider.');
     }
     return context;
 }

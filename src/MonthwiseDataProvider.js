@@ -2,22 +2,36 @@ import React, { createContext, useState, useEffect } from 'react';
 
 import { monthNames } from './CalendarMasterData.js'
 
-import { useSelectedDateTime } from './DateTimeContext';
+import { useCalendarDateTime } from './DateTimeContext';
 
 export const MonthWiseDataContext = createContext();
 
 export const MonthwiseDataProvider = ({ children }) => {
-    const [monthData, setMonthData] = useState(null);
-    const { selectedDate } = useSelectedDateTime();
+    const [currentMonthData, setCurrentMonthData] = useState(null);
+    const [selectedMonthData, setSelectedMonthData] = useState(null);
+    const { serverDateTime, selectedDate } = useCalendarDateTime();
 
     useEffect(() => {
-        fetchData();
+        if (serverDateTime) {
+            fetchMonthData(serverDateTime.month, serverDateTime.year, setCurrentMonthData);
+        }
+    }, [serverDateTime]);
+
+    useEffect(() => {
+        if (selectedDate && serverDateTime) {
+            if (selectedDate.year !== serverDateTime.year
+                || selectedDate.month !== serverDateTime.month) {
+                fetchMonthData(selectedDate.month, selectedDate.year, setSelectedMonthData);
+            } else {
+                setSelectedMonthData(currentMonthData);
+            }
+        }
     }, [selectedDate]);
 
-    const fetchData = async () => {
+    const fetchMonthData = async (month, year, setMonthData) => {
         try {
-            if (selectedDate && selectedDate.date) {
-                const response = await fetch(`${process.env.PUBLIC_URL}/data/${selectedDate.year}/${monthNames[selectedDate.month - 1]}.json`);
+            if (month && year) {
+                const response = await fetch(`${process.env.PUBLIC_URL}/data/${year}/${monthNames[month - 1]}.json`);
                 if (!response.ok) { // check if response failed
                     throw new Error("Response failed!");
                 }
@@ -31,7 +45,7 @@ export const MonthwiseDataProvider = ({ children }) => {
     };
 
     return (
-        <MonthWiseDataContext.Provider value={{ monthData }}>
+        <MonthWiseDataContext.Provider value={{ currentMonthData, selectedMonthData }}>
             {children}
         </MonthWiseDataContext.Provider>
     );
