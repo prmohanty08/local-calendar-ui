@@ -6,14 +6,14 @@ import { getMonthLabel, pageTitle } from './CalendarMasterData.js'
 
 import { MonthWiseDataContext } from './MonthwiseDataProvider';
 
-import { useSelectedDateTime } from './DateTimeContext';
+import { useCalendarDateTime } from './DateTimeContext';
 
 const MonthYearMenu = ({ year, month }) => {
   const { convertToOdia } = useContext(NumberMapContext);
-  const { monthData } = useContext(MonthWiseDataContext);
-  const { updateMonth } = useSelectedDateTime();
+  const { selectedMonthData } = useContext(MonthWiseDataContext);
+  const { updateMonth } = useCalendarDateTime();
 
-  const theMonthLabel = monthData ? monthData.description : getMonthLabel(month - 1, 'OR');
+  const theMonthLabel = selectedMonthData ? selectedMonthData.description : getMonthLabel(month - 1, 'OR');
   const theYearLabel = convertToOdia(year);
 
   useEffect(() => {

@@ -1,12 +1,14 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Calendar.css';
 
-import { calendarWeekdaysHeader } from './CalendarMasterData.js'
+import { calendarWeekdaysHeader } from './CalendarMasterData'
 
-import { useSelectedDateTime } from './DateTimeContext';
+import { useCalendarDateTime } from './DateTimeContext';
 
 import Table from './Table';
 import MonthYearMenu from './MonthYearMenu';
+import SelectedMonthSummary from './SelectedMonthSummary'
+import SelectedDateDetails from './SelectedDateDetails';
 
 const createMonthCalendar = (year, month) => {
     const totalDays = new Date(year, month, 0).getDate();  // Get number of days in the month
@@ -34,15 +36,29 @@ const createMonthCalendar = (year, month) => {
 }
 
 const Calendar = () => {
-    const { selectedDate } = useSelectedDateTime();
+    const { selectedDate } = useCalendarDateTime();
+    const [selectedDateDetailsVisible, setSelectedDateDetailsVisible] = useState(false);
+    const [selectedCalendarDate, setSelectedCalendarDate] = useState(null);
 
     if (selectedDate && selectedDate.date) {
         const dates = createMonthCalendar(selectedDate.year, selectedDate.month);
+        const handleCalendarDateClick = (theCalendarDate) => {
+            setSelectedCalendarDate(theCalendarDate);
+            setSelectedDateDetailsVisible(true);
+        }
+
+        const handleSelectedDateDetailsClose = () => {
+            setSelectedCalendarDate(null);
+            setSelectedDateDetailsVisible(false);
+        }
 
         return (
-            <div className="column light-pink-red center-aligned-content-horizontal">
+            <div className="column light-pink-red center-aligned-content-horizontal calendar-container">
                 <MonthYearMenu year={selectedDate.year} month={selectedDate.month} />
-                <Table headers={calendarWeekdaysHeader} cellData={dates} />
+                <Table headers={calendarWeekdaysHeader} cellData={dates} selectedValue={selectedCalendarDate} onDateClick={handleCalendarDateClick} />
+                <SelectedMonthSummary />
+                <SelectedDateDetails theDate={selectedCalendarDate} onClose={handleSelectedDateDetailsClose}
+                    isVisible={selectedDateDetailsVisible} selectedMonth={selectedDate.month} />
             </div>
         );
     }

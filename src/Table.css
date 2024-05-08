@@ -1,0 +1,72 @@
+.table {
+    display: flex;
+    flex-wrap: wrap;
+    width: 90%;
+    max-width: 90%;
+    flex-direction: column;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.cell {
+    flex-basis: calc(100% / 7);
+    text-align: center;
+    border: 1px solid rgba(244, 103, 122, 0.1);
+    font-weight: 700;
+}
+
+.table .header .cell {
+    font-size: 16px;
+}
+
+.table .cell {
+    font-size: 28px;
+}
+
+.table .cell .date {
+    padding-top: 5px;
+    display: inline-block;
+    margin-bottom: -5px;
+}
+
+.cell-content {
+    position: relative;
+}
+
+.cell-content:hover {
+    background: rgba(244, 103, 122, 0.1);
+}
+
+.cell-content.selected {
+    background: rgba(244, 103, 122, 0.1);
+}
+
+@keyframes grow-selected-date-bar {
+    from {
+        width: 0;
+        left: 50%;
+    }
+
+    to {
+        width: 60%;
+        left: 20%;
+        /* Adjust so that the final position is centered */
+    }
+}
+
+.horizontal-bar {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    height: 4px;
+    width: 60%;
+    background: #f4677a;
+    border-radius: 5px;
+    animation: grow-selected-date-bar 0.5s forwards;
+    /* Browser Compatibility with keyframes */
+    -webkit-animation: grow-selected-date-bar 0.5s forwards;
+    -ms-animation: grow-selected-date-bar 0.5s forwards;
+}
