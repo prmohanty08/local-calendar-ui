@@ -1,35 +1,5 @@
-.table {
-    display: flex;
-    flex-wrap: wrap;
-    width: 90%;
-    max-width: 90%;
-    flex-direction: column;
-}
-
-.row {
-    display: flex;
-    justify-content: space-between;
-}
-
-.cell {
-    flex-basis: calc(100% / 7);
-    text-align: center;
-    border: 1px solid #EDEBEB;
-    font-weight: 700;
-}
-
-.table .header .cell {
-    font-size: 16px;
-}
-
-.table .cell {
-    font-size: 28px;
-}
-
-.table .cell .date {
-    padding-top: 5px;
-    display: inline-block;
-    margin-bottom: -5px;
+.calendar-container {
+    position: relative;
 }
 
 .clickable {
