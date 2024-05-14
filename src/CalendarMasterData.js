@@ -46,3 +46,40 @@ export const getWeekdayLabel = (weekday, language) => {
     }
     return englishWeekday;
 }
+
+const getEnglishTimeOfDay = (date) => {
+    const hour = date.hour;
+    if (hour >= 3 && hour < 5) {
+        return "Early Morning";
+    } else if (hour > 5 && hour < 10) {
+        return "Morning";
+    } else if (hour >= 10 && hour < 12) {
+        return "Prenoon";
+    } else if (hour === 12) {
+        return "Noon";
+    } else if (hour > 12 && hour <= 16) {
+        return "Afternoon";
+    } else if (hour > 16 && hour <= 20) {
+        return "Evening";
+    } else {
+        return "Night";
+    }
+}
+
+const odiaTimesOfDayMap = {
+    'Early Morning': 'ଭୋର',
+    'Morning': 'ସକାଳ',
+    'Prenoon': 'ପୂର୍ବାହ୍ନ',
+    'Noon': 'ମଧ୍ୟାନ',
+    'Afternoon': 'ଅପରାହ୍ନ',
+    'Evening': 'ସନ୍ଧ୍ୟା',
+    'Night': 'ରାତି'
+};
+
+export const getTimeOfDayLabel = (hour, language) => {
+    const englishTimeOfDay = getEnglishTimeOfDay(hour);
+    if (language === 'OR') {
+        return odiaTimesOfDayMap[englishTimeOfDay];
+    }
+    return englishTimeOfDay;
+}

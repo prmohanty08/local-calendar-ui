@@ -7,6 +7,7 @@ import { MonthWiseDataContext } from './MonthwiseDataProvider.js';
 import { getWeekdayLabel } from './CalendarMasterData.js'
 
 import { useCalendarDateTime } from './DateTimeContext.js';
+import Clock from './Clock.js';
 import Moon from './Moon.js';
 import VerticalBanner from './VerticalBanner.js';
 
@@ -36,6 +37,7 @@ const CurrentDateView = () => {
                 <p>
                     {currentMonthData ? currentMonthData.description + ' ' + convertToOdia(serverDateTime.year) : ''}
                 </p>
+                <Clock initialTime={serverDateTime}></Clock>
             </div>
         );
     }
