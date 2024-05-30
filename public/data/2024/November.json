@@ -1,5 +1,157 @@
 {
     "description": "ନଭେମ୍ବର",
+    "occasions": [
+        {
+          "tithi": "ତୁଳା ଦି୧୬ନ ଅମାବାସ୍ୟା",
+          "naxatra": "ସ୍ୱାତୀ ତୁଳା",
+          "lunarDay": 1
+        },
+        {
+          "tithi": "୧୭ ପ୍ରତିପଦ",
+          "naxatra": "ବିଶାଖା ତୁଳା",
+          "lunarDay": 1.5
+        },
+        {
+          "tithi": "୧୮ ଦ୍ଵିତୀୟା",
+          "naxatra": "ବିଶାଖା ବିଛା",
+          "lunarDay": 2
+        },
+        {
+          "tithi": "୧୯ ତୃତୀୟା",
+          "naxatra": "ଅନୁରାଧା ବିଛା",
+          "lunarDay": 3
+        },
+        {
+          "tithi": "୨୦ ଚତୁର୍ଥୀ",
+          "naxatra": "ଜ୍ୟୋଷ୍ଠା ବିଛା",
+          "lunarDay": 4
+        },
+        {
+          "tithi": "୨୧ ପଞ୍ଚମୀ",
+          "naxatra": "ମୂଳା ଧନୁ",
+          "lunarDay": 5
+        },
+        {
+          "tithi": "୨୨ ଷଷ୍ଠୀ",
+          "naxatra": "ପୂର୍ବାଷାଢ଼ା ଧନୁ",
+          "lunarDay": 6
+        },
+        {
+          "tithi": "୨୩ ସପ୍ତମୀ",
+          "naxatra": "ଉତ୍ତରାଷାଢ଼ା ମକର",
+          "lunarDay": 7
+        },
+        {
+          "tithi": "୨୪ ଅଷ୍ଟମୀ",
+          "naxatra": "ଶ୍ରବଣା ମକର",
+          "lunarDay": 8
+        },
+        {
+          "tithi": "୨୫ ନବମୀ",
+          "naxatra": "ଧନିଷ୍ଠା ମକର",
+          "lunarDay": 9
+        },
+        {
+          "tithi": "୨୬ ଦଶମୀ",
+          "naxatra": "ଶତଭିଷା କୁମ୍ଭ",
+          "lunarDay": 10
+        },
+        {
+          "tithi": "୨୭ ଏକାଦଶୀ",
+          "naxatra": "ପୂର୍ବଭାଦ୍ର କୁମ୍ଭ",
+          "lunarDay": 11
+        },
+        {
+          "tithi": "୨୮ ଦ୍ୱାଦଶୀ",
+          "naxatra": "ଉତ୍ତରଭାଦ୍ର ରେବତୀ ମୀନ",
+          "lunarDay": 12
+        },
+        {
+          "tithi": "୨୯ ତ୍ରୟୋଦଶୀ",
+          "naxatra": "ଅଶ୍ୱିନୀ ମେଷ",
+          "lunarDay": 13
+        },
+        {
+          "tithi": "୩୦ ଚତୁର୍ଦ୍ଦଶୀ ପୂର୍ଣ୍ଣିମା",
+          "naxatra": "ଦ୍ଵିଜା ମେଷ",
+          "lunarDay": 15
+        },
+        {
+          "tithi": "ବିଛା ଦି୧ନ ପ୍ରତିପଦ",
+          "naxatra": "କୃତ୍ତିକା ମେଷ",
+          "lunarDay": 16
+        },
+        {
+          "tithi": "୧ ଦ୍ଵିତୀୟା",
+          "naxatra": "ରୋହିଣୀ ବୃଷ",
+          "lunarDay": 17
+        },
+        {
+          "tithi": "୩ ତୃତୀୟା",
+          "naxatra": "ମୃଗଶିରା ବୃଷ",
+          "lunarDay": 18
+        },
+        {
+          "tithi": "୪ ଚତୁର୍ଥୀ",
+          "naxatra": "ଆର୍ଦ୍ରା ମିଥୁନ",
+          "lunarDay": 19
+        },
+        {
+          "tithi": "୫ ପଞ୍ଚମୀ",
+          "naxatra": "ପୁନର୍ବସୁ ମିଥୁନ",
+          "lunarDay": 20
+        },
+        {
+          "tithi": "୬ ଷଷ୍ଠୀ",
+          "naxatra": "ପୁଷ୍ୟା କର୍କଟ",
+          "lunarDay": 21
+        },
+        {
+          "tithi": "୭ ସପ୍ତମୀ",
+          "naxatra": "ଅଶ୍ଲେଷା କର୍କଟ",
+          "lunarDay": 22
+        },
+        {
+          "tithi": "୮ ଅଷ୍ଟମୀ",
+          "naxatra": "ମଘା ସିଂହ",
+          "lunarDay": 23
+        },
+        {
+          "tithi": "୯ ନବମୀ",
+          "naxatra": "ପୂର୍ବାଫାଃ ସିଂହ",
+          "lunarDay": 24
+        },
+        {
+          "tithi": "୧୦ ଦଶମୀ",
+          "naxatra": "ଉତ୍ତରାଫାଃ କନ୍ୟା",
+          "lunarDay": 25
+        },
+        {
+          "tithi": "୧୧ ଏକାଦଶୀ",
+          "naxatra": "ହସ୍ତା କନ୍ୟା",
+          "lunarDay": 26
+        },
+        {
+          "tithi": "୧୨ ଦ୍ୱାଦଶୀ",
+          "naxatra": "ଚିତ୍ରା ତୁଳା",
+          "lunarDay": 27
+        },
+        {
+          "tithi": "୧୩ ତ୍ରୟୋଦଶୀ",
+          "naxatra": "ଚିତ୍ରା ତୁଳା",
+          "lunarDay": 28
+        },
+        {
+          "tithi": "୧୪ ତ୍ରୟୋଦଶୀ ମଳ",
+          "naxatra": "ସ୍ୱାତୀ ତୁଳା",
+          "lunarDay": 29
+        },
+        {
+          "tithi": "୧୫ ଚତୁର୍ଦ୍ଦଶୀ",
+          "naxatra": "ବିଶାଖା ବିଛା",
+          "lunarDay": 30
+        }
+      ],
     "auspiciousDays": [
         {
             "date": "17",
