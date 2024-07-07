@@ -1,0 +1,21 @@
+.location-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    text-align: center;
+}
+
+.prefix {
+    font-size: 0.75em;
+    margin-right: 10px;
+}
+
+.location-text {
+    font-size: 1.15em;
+    font-weight: 500;
+}
+
+.suffix {
+    font-size: 0.75em;
+}

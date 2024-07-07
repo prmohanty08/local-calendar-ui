@@ -1,0 +1,34 @@
+.occasion-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+}
+
+.the-occasion {
+    text-align: left;
+    font-size: 1.5em;
+    font-weight: 500;
+}
+
+.the-special-mention {
+    text-align: left;
+    font-size: 3em;
+    font-weight: 700;
+}
+
+.tithi-container {
+    display: flex;
+    justify-content: space-between;
+    min-width: 300px;
+}
+
+.tithi-container>div {
+    display: flex;
+    flex-direction: column;
+}
+
+.tithi-container .the-tithi {
+    justify-content: flex-end;
+    align-items: flex-start;
+}
