@@ -1,5 +1,162 @@
 {
     "description": "ଅକ୍ଟୋବର",
+    "occasions": [
+        {
+            "tithi": "କନ୍ୟା ଦି୧୬ନ ଚତୁର୍ଦ୍ଦଶୀ",
+            "naxatra": "ପୂର୍ବାଫାଃ ସିଂହ",
+            "lunarDay": 30
+        },
+        {
+            "tithi": "୧୭ ଅମାବାସ୍ୟା",
+            "naxatra": "ଉତ୍ତରାଫାଃ କନ୍ୟା",
+            "lunarDay": 31
+        },
+        {
+            "tithi": "୧୮ ପ୍ରତିପଦ",
+            "naxatra": "ହସ୍ତା କନ୍ୟା",
+            "lunarDay": 1
+        },
+        {
+            "tithi": "୧୯ ଦ୍ଵିତୀୟା",
+            "naxatra": "ଚିତ୍ରା ତୁଳା",
+            "lunarDay": 2
+        },
+        {
+            "tithi": "୨୦ ତୃତୀୟା",
+            "naxatra": "ସ୍ୱାତୀ ତୁଳା",
+            "lunarDay": 3
+        },
+        {
+            "tithi": "୨୧ ତୃତୀୟା ମଳ",
+            "naxatra": "ବିଶାଖା ତୁଳା",
+            "lunarDay": 4
+        },
+        {
+            "tithi": "୨୨ ଚତୁର୍ଥୀ",
+            "naxatra": "ଅନୁରାଧା ବିଛା",
+            "lunarDay": 5
+        },
+        {
+            "tithi": "୨୩ ପଞ୍ଚମୀ",
+            "naxatra": "ଜ୍ୟୋଷ୍ଠା ବିଛା",
+            "lunarDay": 6
+        },
+        {
+            "tithi": "୨୪ ଷଷ୍ଠୀ",
+            "naxatra": "ମୂଳା ଧନୁ",
+            "lunarDay": 7
+        },
+        {
+            "tithi": "୨୫ ସପ୍ତମୀ",
+            "naxatra": "ମୂଳା ଧନୁ",
+            "lunarDay": 8
+        },
+        {
+            "tithi": "୨୬ ଅଷ୍ଟମୀ",
+            "naxatra": "ପୂର୍ବାଷାଢ଼ା ଧନୁ",
+            "lunarDay": 9
+        },
+        {
+            "tithi": "୨୭ ନବମୀ ଉତ୍ତରାଷାଢ଼ା",
+            "naxatra": "ଶ୍ରବଣା ମକର",
+            "lunarDay": 10
+        },
+        {
+            "tithi": "୨୮ ଦଶମୀ",
+            "naxatra": "ଧନିଷ୍ଠା ମକର",
+            "lunarDay": 11
+        },
+        {
+            "tithi": "୨୯ ଏକାଦଶୀ ଦ୍ୱାଦଶୀକ୍ଷଃ",
+            "naxatra": "ଶତଭିଷା କୁମ୍ଭ",
+            "lunarDay": 12
+        },
+        {
+            "tithi": "୩୦ ତ୍ରୟୋଦଶୀ",
+            "naxatra": "ପୂର୍ବଭାଦ୍ର କୁମ୍ଭ",
+            "lunarDay": 14
+        },
+        {
+            "tithi": "୩୧ ଚତୁର୍ଦ୍ଦଶୀ",
+            "naxatra": "ଉତ୍ତରଭାଦ୍ର ମୀନ",
+            "lunarDay": 15
+        },
+        {
+            "tithi": "ତୁଳା ଦି୧ନ ପୂର୍ଣ୍ଣିମା",
+            "naxatra": "ରେବତୀ ମୀନ",
+            "lunarDay": 16
+        },
+        {
+            "tithi": "୨ ପ୍ରତିପଦ",
+            "naxatra": "ଅଶ୍ୱିନୀ ମେଷ",
+            "lunarDay": 17
+        },
+        {
+            "tithi": "୩ ଦ୍ଵିତୀୟା",
+            "naxatra": "ଦ୍ଵିଜା ମେଷ",
+            "lunarDay": 18
+        },
+        {
+            "tithi": "୪ ତୃତୀୟା ଚତୁର୍ଥୀକ୍ଷଃ",
+            "naxatra": "କୃତ୍ତିକା ମେଷ",
+            "lunarDay": 20
+        },
+        {
+            "tithi": "୫ ପଞ୍ଚମୀ",
+            "naxatra": "ରୋହିଣୀ ବୃଷ",
+            "lunarDay": 21
+        },
+        {
+            "tithi": "୬ ଷଷ୍ଠୀ",
+            "naxatra": "ମୃଗଶିରା ମିଥୁନ",
+            "lunarDay": 22
+        },
+        {
+            "tithi": "୭ ସପ୍ତମୀ",
+            "naxatra": "ଆର୍ଦ୍ରା ମିଥୁନ",
+            "lunarDay": 23
+        },
+        {
+            "tithi": "୮ ଅଷ୍ଟମୀ",
+            "naxatra": "ପୁନର୍ବସୁ ମିଥୁନ",
+            "lunarDay": 24
+        },
+        {
+            "tithi": "୯ ନବମୀ",
+            "naxatra": "ପୁଷ୍ୟା କର୍କଟ",
+            "lunarDay": 25
+        },
+        {
+            "tithi": "୧୦ ଦଶମୀ",
+            "naxatra": "ଅଶ୍ଲେଷା କର୍କଟ",
+            "lunarDay": 26
+        },
+        {
+            "tithi": "୧୧ ଏକାଦଶୀ",
+            "naxatra": "ମଘା ସିଂହ",
+            "lunarDay": 27
+        },
+        {
+            "tithi": "୧୨ ଏକାଦଶୀ ମଳ",
+            "naxatra": "ପୂର୍ବାଫାଃ ସିଂହ",
+            "lunarDay": 28
+        },
+        {
+            "tithi": "୧୩ ଦ୍ୱାଦଶୀ",
+            "naxatra": "ଉତ୍ତରାଫାଃ କନ୍ୟା",
+            "lunarDay": 29
+        },
+        {
+            "tithi": "୧୪ ତ୍ରୟୋଦଶୀ",
+            "naxatra": "ହସ୍ତା କନ୍ୟା",
+            "lunarDay": 30
+        },
+        {
+            "tithi": "୧୫ ଚତୁର୍ଦ୍ଦଶୀ",
+            "naxatra": "ଚିତ୍ରା କନ୍ୟା",
+            "lunarDay": 31
+        }
+    ],
     "govtHolidays": [
         {
             "date": "2",
