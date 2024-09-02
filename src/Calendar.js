@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useLayoutEffect } from 'react';
 import './Calendar.css';
 
 import { calendarWeekdaysHeader } from './CalendarMasterData'
@@ -40,17 +40,27 @@ const Calendar = () => {
     const [selectedDateDetailsVisible, setSelectedDateDetailsVisible] = useState(false);
     const [selectedCalendarDate, setSelectedCalendarDate] = useState(null);
 
+    const [autoSelectCalendarDate, setAutoSelectCalendarDate] = useState(true);
+
+    useLayoutEffect(() => {
+        if (autoSelectCalendarDate && selectedDate?.date) {
+            handleCalendarDateClick(selectedDate.date);
+        }
+    }, [selectedDate]);
+
+    const handleCalendarDateClick = (theCalendarDate) => {
+        setSelectedCalendarDate(theCalendarDate);
+        setSelectedDateDetailsVisible(true);
+        setAutoSelectCalendarDate(false);
+    }
+
+    const handleSelectedDateDetailsClose = () => {
+        setSelectedDateDetailsVisible(false);
+        setSelectedCalendarDate(null);
+    }
+
     if (selectedDate && selectedDate.date) {
         const dates = createMonthCalendar(selectedDate.year, selectedDate.month);
-        const handleCalendarDateClick = (theCalendarDate) => {
-            setSelectedCalendarDate(theCalendarDate);
-            setSelectedDateDetailsVisible(true);
-        }
-
-        const handleSelectedDateDetailsClose = () => {
-            setSelectedDateDetailsVisible(false);
-            setSelectedCalendarDate(null);
-        }
 
         return (
             <div className="column light-pink-red center-aligned-content-horizontal calendar-container">

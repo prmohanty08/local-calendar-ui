@@ -1,8 +1,8 @@
 @font-face {
     font-family: 'OdiaFont';
-    src: url('./assets/fonts/baloobhaina2.ttf') format('truetype');
-    /* src: url('./assets/fonts/odia-font-v1.woff2') format('woff2'); */
-    /* src: url('./assets/fonts/notosansodia.ttf') format('truetype'); */
+    src: url('./../assets/fonts/baloobhaina2.ttf') format('truetype');
+    /* src: url('./../assets/fonts/odia-font-v1.woff2') format('woff2'); */
+    /* src: url('./../assets/fonts/notosansodia.ttf') format('truetype'); */
     unicode-range: U+0951-0952, U+0964-0965, U+0B01-0B77, U+1CDA, U+1CF2, U+200C-200D, U+20B9, U+25CC;
 }
 
@@ -16,15 +16,49 @@ body,
 html {
     width: 100%;
     height: 100%;
-    overflow: auto;
     font-family: "OdiaFont";
     background-color: #f4677a;
+    overflow-y: auto;
+    -ms-overflow-style: none;
+    /* Internet Explorer 10+ */
+    scrollbar-width: none;
+    /* Firefox */
 }
 
-.row::after {
-    content: "";
-    clear: both;
-    display: table;
+body::-webkit-scrollbar {
+    display: none;
+    /* Chrome, Safari and Opera */
+}
+
+.no-scrollbar-y {
+    overflow-y: auto;
+    -ms-overflow-style: none;
+    /* Internet Explorer 10+ */
+    scrollbar-width: none;
+    /* Firefox */
+}
+
+.no-scrollbar-y::-webkit-scrollbar {
+    display: none;
+    /* Chrome, Safari and Opera */
+}
+
+.no-scrollbar-x {
+    overflow-x: auto;
+    -ms-overflow-style: none;
+    /* Internet Explorer 10+ */
+    scrollbar-width: none;
+    /* Firefox */
+}
+
+.no-scrollbar-x::-webkit-scrollbar {
+    display: none;
+    /* Chrome, Safari and Opera */
+}
+
+.main-container {
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .column {
@@ -32,7 +66,6 @@ html {
     width: 100%;
     min-height: 100vh;
     text-align: center;
-    min-width: 400px;
 }
 
 .center-aligned-content {
@@ -40,7 +73,7 @@ html {
     /* this will turn the column into a flex container */
     flex-direction: column;
     /* this makes the content stack vertically */
-    justify-content: center;
+    /* justify-content: center; */
     /* this centers the content vertically in the column */
     align-items: center;
     /* this centers the content horizontally in the column */
@@ -73,10 +106,4 @@ html {
 
 .flip-horizontal {
     transform: rotate(180deg);
-}
-
-@media screen and (min-width: 768px) {
-    .column {
-        width: 33.33%;
-    }
 }

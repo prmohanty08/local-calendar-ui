@@ -13,7 +13,7 @@ export const MonthwiseDataProvider = ({ children }) => {
 
     useEffect(() => {
         if (serverDateTime) {
-            fetchMonthData(serverDateTime.month, serverDateTime.year, [setCurrentMonthData, setSelectedMonthData]);
+            loadMonthData(serverDateTime.month, serverDateTime.year, [setCurrentMonthData, setSelectedMonthData]);
         }
     }, [serverDateTime]);
 
@@ -21,19 +21,19 @@ export const MonthwiseDataProvider = ({ children }) => {
         if (selectedDate && serverDateTime) {
             if (selectedDate.year !== serverDateTime.year
                 || selectedDate.month !== serverDateTime.month) {
-                fetchMonthData(selectedDate.month, selectedDate.year, setSelectedMonthData);
+                loadMonthData(selectedDate.month, selectedDate.year, setSelectedMonthData);
             } else {
                 setSelectedMonthData(currentMonthData);
             }
         }
     }, [selectedDate]);
 
-    const fetchMonthData = async (month, year, monthDataSetters = []) => {
+    const getMonthDetails = async (month, year) => {
         let monthDetails = null;
         try {
             if (month && year) {
                 const response = await fetch(`${process.env.PUBLIC_URL}/data/${year}/${monthNames[month - 1]}.json`);
-                if (!response.ok) { // check if response failed
+                if (!response.ok) {
                     throw new Error("Response failed!");
                 }
                 monthDetails = await response.json();
@@ -41,13 +41,19 @@ export const MonthwiseDataProvider = ({ children }) => {
         } catch (error) {
             console.log(error);
         }
-        Array.isArray(monthDataSetters)
-            ? monthDataSetters.forEach(setMonthData => setMonthData(monthDetails))
-            : monthDataSetters(monthDetails);
+        return monthDetails;
+    };
+
+    const loadMonthData = async (month, year, monthDataSetters = []) => {
+        getMonthDetails(month, year)
+            .then(data => Array.isArray(monthDataSetters)
+                ? monthDataSetters.forEach(setMonthData => setMonthData(data))
+                : monthDataSetters(data));
+
     };
 
     return (
-        <MonthWiseDataContext.Provider value={{ currentMonthData, selectedMonthData }}>
+        <MonthWiseDataContext.Provider value={{ currentMonthData, selectedMonthData, getMonthDetails }}>
             {children}
         </MonthWiseDataContext.Provider>
     );
