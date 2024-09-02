@@ -39,8 +39,9 @@
 .filter-menu-container {
     display: flex;
     justify-content: space-around;
-    padding: 15px 50px;
+    padding: 15px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    gap: 15px;
 }
 
 .filter-menu-container .filter-menu {
@@ -50,6 +51,7 @@
     font-weight: 400;
     padding: 4px 20px 0px 20px;
     cursor: pointer;
+    white-space: nowrap;
 }
 
 .filter-menu-container .filter-menu:not(.selected):hover {
