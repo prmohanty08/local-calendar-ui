@@ -49,7 +49,7 @@ export const MonthwiseDataProvider = ({ children }) => {
             .then(data => Array.isArray(monthDataSetters)
                 ? monthDataSetters.forEach(setMonthData => setMonthData(data))
                 : monthDataSetters(data));
-
+      
     };
 
     return (
