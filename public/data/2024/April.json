@@ -2,151 +2,181 @@
     "description": "ଅପ୍ରେଲ୍",
     "occasions": [
         {
+            "solarDay": 19,
             "tithi": "ମୀନ ଦି୧୯ନ ସପ୍ତମୀ",
             "naxatra": "ମୂଳା ଧନୁ",
             "lunarDay": 23
         },
         {
+            "solarDay": 20,
             "tithi": "୨୦ ଅଷ୍ଟମୀ",
             "naxatra": "ପୂର୍ବାଷାଢ଼ା ଧନୁ",
             "lunarDay": 24
         },
         {
+            "solarDay": 21,
             "tithi": "୨୧ ନବମୀ",
             "naxatra": "ଉତ୍ତରାଷାଢ଼ା ମକର",
             "lunarDay": 25
         },
         {
+            "solarDay": 22,
             "tithi": "୨୨ ଦଶମୀ",
             "naxatra": "ଶ୍ରବଣା ମକର",
             "lunarDay": 26
         },
         {
+            "solarDay": 23,
             "tithi": "୨୩ ଏକାଦଶୀ",
             "naxatra": "ଧନିଷ୍ଠା ମକର",
             "lunarDay": 27
         },
         {
+            "solarDay": 24,
             "tithi": "୨୪ ଦ୍ୱାଦଶୀ",
             "naxatra": "ଶତଭିଷା କୁମ୍ଭ",
             "lunarDay": 28
         },
         {
+            "solarDay": 25,
             "tithi": "୨୫ ତ୍ରୟୋଦଶୀ",
             "naxatra": "ଚତୁର୍ଦ୍ଦଶୀକ୍ଷଃ ପୂର୍ବଭାଦ୍ର କୁମ୍ଭ",
             "lunarDay": 29
         },
         {
+            "solarDay": 26,
             "tithi": "୨୬ ଅମାବାସ୍ୟା",
             "naxatra": "ଉତ୍ତରଭାଦ୍ର ମୀନ",
             "lunarDay": 30
         },
         {
+            "solarDay": 27,
             "tithi": "୨୭ ପ୍ରତିପଦ ରେବତୀ",
             "naxatra": "ଅଶ୍ବିନୀକ୍ଷଃ ମୀନ",
             "lunarDay": 1
         },
         {
+            "solarDay": 28,
             "tithi": "୨୮ ଦ୍ଵିତୀୟା",
             "naxatra": "ଦ୍ଵିଜା ମେଷ",
             "lunarDay": 2
         },
         {
+            "solarDay": 29,
             "tithi": "୨୯ ତୃତୀୟା",
             "naxatra": "କୃତ୍ତିକା ମେଷ",
             "lunarDay": 3
         },
         {
+            "solarDay": 30,
             "tithi": "୩୦ ଚତୁର୍ଥୀ",
             "naxatra": "ରୋହିଣୀ ବୃଷ",
             "lunarDay": 4
         },
         {
+            "solarDay": 31,
             "tithi": "୩୧ ପଞ୍ଚମୀ",
             "naxatra": "ମୃଗଶିରା ବୃଷ",
             "lunarDay": 5
         },
         {
+            "solarDay": 1,
             "tithi": "ମେଷ ଦି୧ନ ଷଷ୍ଠୀ",
             "naxatra": "ଆର୍ଦ୍ରା ମିଥୁନ",
             "lunarDay": 6
         },
         {
+            "solarDay": 2,
             "tithi": "୨ ସପ୍ତମୀ",
             "naxatra": "ପୁନର୍ବସୁ ମିଥୁନ",
             "lunarDay": 7
         },
         {
+            "solarDay": 3,
             "tithi": "୩ ଅଷ୍ଟମୀ",
             "naxatra": "ପୁଷ୍ୟା କର୍କଟ",
             "lunarDay": 8
         },
         {
+            "solarDay": 4,
             "tithi": "୪ ନବମୀ",
             "naxatra": "ପୁଷ୍ୟା କର୍କଟ",
             "lunarDay": 9
         },
         {
+            "solarDay": 5,
             "tithi": "୫ ଦଶମୀ",
             "naxatra": "ଅଶ୍ଲେଷା କର୍କଟ",
             "lunarDay": 10
         },
         {
+            "solarDay": 6,
             "tithi": "୬ ଏକାଦଶୀ",
             "naxatra": "ମଘା ସିଂହ",
             "lunarDay": 11
         },
         {
+            "solarDay": 7,
             "tithi": "୭ ଦ୍ୱାଦଶୀ",
             "naxatra": "ପୂର୍ବାଫାଃ ସିଂହ",
             "lunarDay": 12
         },
         {
+            "solarDay": 8,
             "tithi": "୮ ତ୍ରୟୋଦଶୀ",
             "naxatra": "ଉତ୍ତରାଫାଃ କନ୍ୟା",
             "lunarDay": 13
         },
         {
+            "solarDay": 9,
             "tithi": "୯ ଚତୁର୍ଦ୍ଦଶୀ",
             "naxatra": "ହସ୍ତା କନ୍ୟା",
             "lunarDay": 14
         },
         {
+            "solarDay": 10,
             "tithi": "୧୦ ପୂର୍ଣ୍ଣିମା",
             "naxatra": "ଚିତ୍ରା କନ୍ୟା",
             "lunarDay": 15
         },
         {
+            "solarDay": 11,
             "tithi": "୧୧ ପ୍ରତିପଦ",
             "naxatra": "ସ୍ୱାତୀ ତୁଳା",
             "lunarDay": 16
         },
         {
+            "solarDay": 12,
             "tithi": "୧୨ ପ୍ରତିପଦ ମଳ",
             "naxatra": "ବିଶାଖା ତୁଳା",
             "lunarDay": 17
         },
         {
+            "solarDay": 13,
             "tithi": "୧୩ ଦ୍ଵିତୀୟା",
             "naxatra": "ଅନୁରାଧା ବିଛା",
             "lunarDay": 18
         },
         {
+            "solarDay": 14,
             "tithi": "୧୪ ତୃତୀୟା",
             "naxatra": "ଜ୍ୟୋଷ୍ଠା ବିଛା",
             "lunarDay": 19
         },
         {
+            "solarDay": 15,
             "tithi": "୧୫ ଚତୁର୍ଥୀ",
             "naxatra": "ମୂଳା ଧନୁ",
             "lunarDay": 20
         },
         {
+            "solarDay": 16,
             "tithi": "୧୬ ପଞ୍ଚମୀ",
             "naxatra": "ମୂଳା ଧନୁ",
             "lunarDay": 21
         },
         {
+            "solarDay": 17,
             "tithi": "୧୭ ଷଷ୍ଠୀ ପୂର୍ବାଷାଢ଼ା",
             "naxatra": "ଉତ୍ତରାଷାଢ଼ା ଧନୁ",
             "lunarDay": 22

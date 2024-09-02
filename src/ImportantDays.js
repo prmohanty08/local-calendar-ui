@@ -77,7 +77,7 @@ const FilterMenu = ({ selected, setSelected }) => {
     }
 
     return (
-        <div className='filter-menu-container'>
+        <div className='filter-menu-container no-scrollbar-x'>
             <div className={setFilterMenuClasses('Festivals')} onClick={() => setSelected('Festivals')}>ପର୍ବ ଦିନ</div>
             <div className={setFilterMenuClasses('Holidays')} onClick={() => setSelected('Holidays')}>ସରକାରୀ ଛୁଟି</div>
             <div className={setFilterMenuClasses('AuspiciousDays')} onClick={() => setSelected('AuspiciousDays')}>ବିବାହ ବ୍ରତ</div>

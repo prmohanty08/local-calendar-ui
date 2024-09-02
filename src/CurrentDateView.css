@@ -1,21 +1,16 @@
 .current-date-view {
     position: relative;
+    /*background-image: url('./assets/images/raja-3.png');*/
+    background-repeat: no-repeat;
+    background-position: top right;
+    background-size: 400px 400px;
 }
 
-.the-day {
-    font-size: 50px;
-    font-weight: 800;
+.the-label {
+    text-align: left;
+    font-size: 1em;
 }
 
-.the-date {
-    font-size: 140px;
-    font-weight: 700;
-    line-height: 1.2;
-    letter-spacing: 0px;
-    margin-top: -30px;
-}
-
-.the-occasion {
-    font-size: 16px;
-    font-weight: 500;
+.subsequent-label {
+    margin-top: 3%;
 }

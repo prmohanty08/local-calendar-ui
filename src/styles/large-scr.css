@@ -1,0 +1,7 @@
+@media (min-width: 1024px) {
+
+    /* Styles applicable for desktop */
+    .column {
+        flex: 1;
+    }
+}
