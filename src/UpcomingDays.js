@@ -41,7 +41,7 @@ const UpcomingDays = () => {
         if (serverDateTime && currentMonthData) {
             fetchAllMonthData(serverDateTime, (upcomingDaysUpto - upcomingDaysFrom + 1));
         }
-    }, [serverDateTime]);
+    }, [serverDateTime, currentMonthData]);
 
     useEffect(() => {
         if (!serverDateTime || !monthDataArray.length) return;
@@ -52,7 +52,7 @@ const UpcomingDays = () => {
         for (let i = upcomingDaysFrom; i <= upcomingDaysUpto; i++) {
             const nextDayDateTime = serverDateTime.plus({ days: i });
             const monthIndex = nextDayDateTime.month - serverDateTime.month;
-            const applicableMonthData = monthDataArray[Math.max(monthIndex, 0)]; // Ensure no out-of-bound access
+            const applicableMonthData = monthDataArray[Math.max(monthIndex, 0)];
 
             const dayData = {
                 monthChanged: false,

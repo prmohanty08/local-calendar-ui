@@ -1,6 +1,6 @@
 {
-  "name": "react.dev",
-  "version": "0.0.0",
+  "name": "odia-calendar",
+  "version": "0.0.1",
   "homepage": "https://odia.digitalcalendars.world",
   "main": "/src/index.js",
   "scripts": {
