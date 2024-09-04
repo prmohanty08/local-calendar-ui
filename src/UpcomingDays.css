@@ -53,3 +53,13 @@
     margin: 0 0 -6px 5px;
     font-size: 0.9em;
 }
+
+.card.special-event {
+    background-color: rgba(255, 223, 186, 0.7);
+    box-shadow: 0px 0px 5px rgba(255, 174, 0, 0.9);
+}
+
+.card.special-event .special-event-details .special-mention {
+    font-size: 1.2em;
+    margin: -1px 0 -7px 0;
+}
