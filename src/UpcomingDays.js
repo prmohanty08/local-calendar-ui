@@ -41,7 +41,7 @@ const UpcomingDays = () => {
         if (serverDateTime && currentMonthData) {
             fetchAllMonthData(serverDateTime, (upcomingDaysUpto - upcomingDaysFrom + 1));
         }
-    }, [serverDateTime]);
+    }, [serverDateTime, currentMonthData]);
 
     useEffect(() => {
         if (!serverDateTime || !monthDataArray.length) return;
@@ -52,7 +52,7 @@ const UpcomingDays = () => {
         for (let i = upcomingDaysFrom; i <= upcomingDaysUpto; i++) {
             const nextDayDateTime = serverDateTime.plus({ days: i });
             const monthIndex = nextDayDateTime.month - serverDateTime.month;
-            const applicableMonthData = monthDataArray[Math.max(monthIndex, 0)]; // Ensure no out-of-bound access
+            const applicableMonthData = monthDataArray[Math.max(monthIndex, 0)];
 
             const dayData = {
                 monthChanged: false,
@@ -96,14 +96,20 @@ const UpcomingDays = () => {
                                 {dayData.monthDescription} {convertToOdia(dayData.dateTime.year)}
                             </div>
                         )}
-                        <div className="card">
+                        <div className={`card ${dayData.dayDetails.specialMention ? 'special-event' : ''}`}>
                             <div className="the-date-in-background">{convertToOdia(dayData.dateTime.day)}</div>
                             <div className="the-day-in-background">{getWeekdayLabel(dayData.dateTime.weekday - 1, 'OR')}</div>
-                            <div className="the-date-details">
-                                <span>{dayData.dayDetails.tithi}</span>
-                                <span> ※ </span>
-                                <span>{dayData.dayDetails.naxatra}</span>
-                            </div>
+                            {dayData.dayDetails.specialMention ? (
+                                <div className="special-event-details">
+                                    <div className="special-mention">{dayData.dayDetails.specialMention}</div>
+                                </div>
+                            ) : (
+                                <div className="the-date-details">
+                                    <span>{dayData.dayDetails.tithi}</span>
+                                    <span> ※ </span>
+                                    <span>{dayData.dayDetails.naxatra}</span>
+                                </div>
+                            )}
                         </div>
                     </React.Fragment>
                 ))}

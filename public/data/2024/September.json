@@ -30,7 +30,8 @@
             "solarDay": 21,
             "tithi": "୨୧ ଦ୍ଵିତୀୟା",
             "naxatra": "ଉତ୍ତରାଫାଃ କନ୍ୟା",
-            "lunarDay": 4
+            "lunarDay": 4,
+            "specialMention": "ଗୁରୁ ଦିବସ"
         },
         {
             "solarDay": 22,
@@ -42,13 +43,15 @@
             "solarDay": 23,
             "tithi": "୨୩ ଚତୁର୍ଥୀ",
             "naxatra": "ଚିତ୍ରା କନ୍ୟା",
-            "lunarDay": 6
+            "lunarDay": 6,
+            "specialMention": "ଗଣେଶ ପୂଜା"
         },
         {
             "solarDay": 24,
             "tithi": "୨୪ ପଞ୍ଚମୀ",
             "naxatra": "ସ୍ୱାତୀ ତୁଳା",
-            "lunarDay": 7
+            "lunarDay": 7,
+            "specialMention": "ନୂଆଖାଇ"
         },
         {
             "solarDay": 25,
@@ -84,7 +87,8 @@
             "solarDay": 30,
             "tithi": "୩୦ ଏକାଦଶୀ",
             "naxatra": "ଉତ୍ତରାଷାଢ଼ା ଧନୁ",
-            "lunarDay": 13
+            "lunarDay": 13,
+            "specialMention": "ବଡ଼ ଏକାଦଶୀ"
         },
         {
             "solarDay": 31,
@@ -96,7 +100,8 @@
             "solarDay": 1,
             "tithi": "କନ୍ୟା ଦି୧ନ ତ୍ରୟୋଦଶୀ",
             "naxatra": "ଧନିଷ୍ଠା ମକର",
-            "lunarDay": 15
+            "lunarDay": 15,
+            "specialMention": "କନ୍ୟା ସଂକ୍ରାନ୍ତି ଓ ବିଶ୍ୱକର୍ମା ପୂଜା"
         },
         {
             "solarDay": 2,
@@ -108,7 +113,8 @@
             "solarDay": 3,
             "tithi": "୩ ପୂର୍ଣ୍ଣିମା ପ୍ରତିପଦ କ୍ଷୟ",
             "naxatra": "ପୂର୍ବଭାଦ୍ର କୁମ୍ଭ",
-            "lunarDay": 17
+            "lunarDay": 17,
+            "specialMention": "ପୂର୍ଣ୍ଣିମା"
         },
         {
             "solarDay": 4,
