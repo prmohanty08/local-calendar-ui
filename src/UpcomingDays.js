@@ -96,14 +96,20 @@ const UpcomingDays = () => {
                                 {dayData.monthDescription} {convertToOdia(dayData.dateTime.year)}
                             </div>
                         )}
-                        <div className="card">
+                        <div className={`card ${dayData.dayDetails.specialMention ? 'special-event' : ''}`}>
                             <div className="the-date-in-background">{convertToOdia(dayData.dateTime.day)}</div>
                             <div className="the-day-in-background">{getWeekdayLabel(dayData.dateTime.weekday - 1, 'OR')}</div>
-                            <div className="the-date-details">
-                                <span>{dayData.dayDetails.tithi}</span>
-                                <span> ※ </span>
-                                <span>{dayData.dayDetails.naxatra}</span>
-                            </div>
+                            {dayData.dayDetails.specialMention ? (
+                                <div className="special-event-details">
+                                    <div className="special-mention">{dayData.dayDetails.specialMention}</div>
+                                </div>
+                            ) : (
+                                <div className="the-date-details">
+                                    <span>{dayData.dayDetails.tithi}</span>
+                                    <span> ※ </span>
+                                    <span>{dayData.dayDetails.naxatra}</span>
+                                </div>
+                            )}
                         </div>
                     </React.Fragment>
                 ))}
