@@ -60,6 +60,8 @@
 }
 
 .card.special-event .special-event-details .special-mention {
+    position: relative;
+    z-index: 1;
     font-size: 1.2em;
     margin: -1px 0 -7px 0;
 }
